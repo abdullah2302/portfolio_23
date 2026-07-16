@@ -54,7 +54,7 @@ a:hover {
 main > section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 20px 20px;
+  padding: 60px 20px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -73,6 +73,7 @@ main > section:last-child {
   top: 0;
   background: rgba(15, 17, 21, 0.9);
   backdrop-filter: blur(6px);
+  z-index: 20;
 }
 
 .brand {
@@ -96,7 +97,7 @@ main > section:last-child {
 /* Hero */
 .hero {
   text-align: center;
-  padding: 50px 0 50px 0px;
+padding: 50px 0px 50px 0px;
 }
 
 .hero h1 {
@@ -171,12 +172,6 @@ main > section:last-child {
   margin-bottom: 8px;
 }
 
-.timeline-role {
-  color: var(--text-soft);
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-
 /* Skills section */
 .tag-list {
   display: flex;
@@ -186,7 +181,7 @@ main > section:last-child {
 
 .tag-list li {
   background: var(--card);
-  border: 1px solid var(--border);
+ 
   color: var(--text-soft);
   padding: 6px 14px;
   border-radius: var(--radius);
@@ -195,7 +190,7 @@ main > section:last-child {
 }
 
 .tag-list li:hover {
-  border-color: var(--accent);
+ background-color: rgb(45, 48, 202);
   color: var(--text);
 }
 
@@ -346,3 +341,76 @@ main > section:last-child {
   padding: 3px 8px;
   border-radius: 100px;
 }
+
+/* Hero title / timeline role labels */
+.hero-title {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.timeline-role {
+  color: var(--text-soft);
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+/* Project "Show more" toggle — native <details>, no JS needed */
+.project-desc {
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.project-more {
+  margin-bottom: 10px;
+}
+
+.project-more summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+}
+
+.project-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-more summary::after {
+  content: "▾";
+  font-size: 11px;
+  transition: transform 0.15s ease;
+}
+
+.project-more[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.project-more[open] summary {
+  margin-bottom: 8px;
+}
+
+.project-more summary:hover {
+  color:rgb(45, 48, 202);
+}
+
+.project-more p {
+  color: var(--text-soft);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Swap label text when open, via two summary spans controlled by [open] */
+.project-more summary .label-more { display: inline; }
+.project-more summary .label-less { display: none; }
+.project-more[open] summary .label-more { display: none; }
+.project-more[open] summary .label-less { display: inline; }
