@@ -258,9 +258,10 @@ main > section:last-child {
   text-decoration: none;
 }
 
-.footer-contact svg {
+.footer-contact i {
+  font-size: 16px;
   width: 18px;
-  height: 18px;
+  text-align: center;
   flex-shrink: 0;
 }
 
@@ -272,9 +273,10 @@ main > section:last-child {
   font-size: 14px;
 }
 
-.footer-location svg {
+.footer-location i {
+  font-size: 16px;
   width: 18px;
-  height: 18px;
+  text-align: center;
 }
 
 .site-footer .copyright {
@@ -431,8 +433,10 @@ main > section:last-child {
 }
 
 .project-more summary::after {
-  content: "▾";
-  font-size: 11px;
+  content: "\f078"; /* fa-chevron-down */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 10px;
   transition: transform 0.15s ease;
 }
 
