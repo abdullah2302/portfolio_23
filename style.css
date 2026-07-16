@@ -73,6 +73,7 @@ main > section:last-child {
   top: 0;
   background: rgba(15, 17, 21, 0.9);
   backdrop-filter: blur(6px);
+  z-index: 20;
 }
 
 .brand {
