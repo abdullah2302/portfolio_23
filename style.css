@@ -235,7 +235,9 @@ a:hover {
   height: 12px;
   
   background: var(--bg);
-  border: 2px solid var(--accent);
+      border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid var(--accent);
 }
 
 .timeline-title {
